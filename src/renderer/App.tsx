@@ -1,11 +1,16 @@
+import { useEffect, useState } from 'react';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
 import './App.css';
 
 const Hello = () => {
+  const [estado, setEstado] = useState('aguardando..');
+  useEffect(() => {
+    //setEstado(window.api.getAll());
+  }, []);
   return (
     <div>
-      <h1 className="text-danger">sss</h1>
+      <h1 className="text-danger">{estado}</h1>
       <div className="Hello">
         <img width="200px" alt="icon" src={icon} />
       </div>
